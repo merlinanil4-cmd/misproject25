@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies - Cozy Corner</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hobby-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 32px rgba(161, 124, 107, 0.1);
+            border: 2px solid var(--soft-pink);
+            transition: transform 0.3s ease;
+        }
+
+        .hobby-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .hobby-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hobby-icon {
+            font-size: 2.5rem;
+            color: var(--dusty-rose);
+        }
+
+        .hobby-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--warm-brown);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .hobby-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--warm-brown);
+            margin-bottom: 1.5rem;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, var(--soft-pink), var(--cream));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 4rem;
+            font-family: 'Dancing Script', cursive;
+            color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+        }
+
+        .quote-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: var(--warm-brown);
+            margin-bottom: 1rem;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--soft-pink);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-left: 50%;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 50%;
+            padding-left: 0;
+        }
+
+        .timeline-content {
+            width: 80%;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(161, 124, 107, 0.1);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            border: 10px solid transparent;
+            border-right-color: white;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: auto;
+            left: 100%;
+            border-right-color: transparent;
+            border-left-color: white;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 30px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-content::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-me-section">
+        <div class="container">
+            <div class="profile-section">
+                <h1 class="welcome-title">My Hobbies & Passions</h1>
+                <p class="subtitle">The Things That Make Me, Me</p>
+            </div>
+
+            <div class="navigation-tabs">
+                <a href="index.html" class="nav-tab">Home</a>
+                <a href="about.html" class="nav-tab active-nav">Hobbies</a>
+                <a href="discover.html" class="nav-tab">Discover Page</a>
+                <a href="resume.html" class="nav-tab">Resume Page</a>
+                <a href="career.html" class="nav-tab">Career Interest</a>
+                <a href="game.html" class="nav-tab">Interactive Game</a>
+            </div>
+
+            <div class="quote-box">
+                <p class="quote-text">"Life is not about finding yourself. Life is about creating yourself."</p>
+            </div>
+
+            <!-- Photography Section -->
+            <section class="hobby-section">
+                <div class="hobby-header">
+                    <i class="fas fa-camera hobby-icon"></i>
+                    <h2 class="hobby-title">Photography</h2>
+                </div>
+                <p class="hobby-description">
+                    My journey into photography began three years ago when I discovered the magic of capturing fleeting moments. 
+                    Through my lens, I've learned to see the world differently – finding beauty in the smallest details and 
+                    magic in everyday scenes. Whether it's the golden light of sunset or the quiet charm of street photography, 
+                    each click of the shutter helps me tell stories without words.
+                </p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="images/photography1.jpg" alt="Sunset Photography" class="gallery-image">
+                        <div class="image-caption">Golden Hour at the Beach</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photography2.jpg" alt="Street Photography" class="gallery-image">
+                        <div class="image-caption">Urban Stories</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photography3.jpg" alt="Nature Photography" class="gallery-image">
+                        <div class="image-caption">Nature's Details</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Art & Crafts Section -->
+            <section class="hobby-section">
+                <div class="hobby-header">
+                    <i class="fas fa-paint-brush hobby-icon"></i>
+                    <h2 class="hobby-title">Art & Crafts</h2>
+                </div>
+                <p class="hobby-description">
+                    Art has always been my sanctuary – a place where I can express myself freely and create something 
+                    meaningful from nothing. From watercolor painting to digital art, each medium offers its own unique way 
+                    of storytelling. I especially love creating whimsical illustrations that bring a touch of magic to 
+                    everyday life. My craft journey has taught me patience, persistence, and the joy of creating something 
+                    with my own hands.
+                </p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="images/art1.jpg" alt="Watercolor Painting" class="gallery-image">
+                        <div class="image-caption">Watercolor Dreams</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art2.jpg" alt="Digital Art" class="gallery-image">
+                        <div class="image-caption">Digital Creations</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/art3.jpg" alt="Craft Projects" class="gallery-image">
+                        <div class="image-caption">Handmade with Love</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reading & Writing Section -->
+            <section class="hobby-section">
+                <div class="hobby-header">
+                    <i class="fas fa-book hobby-icon"></i>
+                    <h2 class="hobby-title">Reading & Writing</h2>
+                </div>
+                <p class="hobby-description">
+                    Books have been my constant companions since childhood, opening doors to countless worlds and 
+                    perspectives. I find myself drawn to fantasy and contemporary fiction, where imagination meets reality 
+                    in the most beautiful ways. Writing came naturally as an extension of my love for reading. Through my 
+                    journal and creative writing, I've discovered the power of words to heal, inspire, and transform.
+                </p>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="images/reading1.jpg" alt="Reading Nook" class="gallery-image">
+                        <div class="image-caption">My Cozy Reading Corner</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/reading2.jpg" alt="Book Collection" class="gallery-image">
+                        <div class="image-caption">Treasured Stories</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/reading3.jpg" alt="Writing Journal" class="gallery-image">
+                        <div class="image-caption">Pages of Thoughts</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Journey Timeline -->
+            <section class="timeline">
+                <h2 class="hobby-title" style="text-align: center; margin-bottom: 2rem;">My Journey</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2020</h3>
+                        <p>Discovered my passion for photography during lockdown</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2021</h3>
+                        <p>Started my art journal and exploring different craft techniques</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2022</h3>
+                        <p>Held my first photography exhibition</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p>Started a reading club and writing workshop</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2024</h3>
+                        <p>Published my first collection of short stories</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Image lazy loading
+        const images = document.querySelectorAll('.gallery-image');
+        const imageOptions = {
+            threshold: 0.5,
+            rootMargin: "0px 0px 50px 0px"
+        };
+
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.src; // Load the image
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, imageOptions);
+
+        images.forEach(image => {
+            imageObserver.observe(image);
+        });
+
+        // Animation for timeline items
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const timelineOptions = {
+            threshold: 0.5,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const timelineObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = "translateX(0)";
+                }
+            });
+        }, timelineOptions);
+
+        timelineItems.forEach(item => {
+            item.style.opacity = 0;
+            item.style.transform = "translateX(-50px)";
+            item.style.transition = "all 0.5s ease-out";
+            timelineObserver.observe(item);
+        });
+    </script>
+</body>
+</html>

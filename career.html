@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Interests - My Cozy Corner</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #fffaf7;
+      margin: 0;
+      padding: 0;
+      color: #4a3c31;
+    }
+
+    .about-me-section {
+      padding: 50px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 40px;
+    }
+
+    .welcome-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      text-align: center;
+      color: #4a3c31;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      font-size: 1.6rem;
+      color: #e8b4b8;
+      margin-bottom: 30px;
+    }
+
+    .navigation-tabs {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .nav-tab {
+      display: inline-block;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #6e5c4d;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 25px;
+      border: 2px solid #f5d0d0;
+      transition: all 0.3s ease;
+    }
+
+    .nav-tab:hover {
+      background-color: #ffd6d6;
+      color: #fff;
+    }
+
+    .active-nav {
+      background-color: #e8b4b8;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(232, 180, 184, 0.3);
+    }
+
+    .career-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .career-card {
+      background: #fff8f5;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .career-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .career-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #4a3c31;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .career-card h4 {
+      color: #a17c6b;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    .career-card p {
+      color: #5e4c42;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .career-card a {
+      color: #e8b4b8;
+      text-decoration: none;
+    }
+
+    .career-card a:hover {
+      text-decoration: underline;
+    }
+
+    .company-logo {
+      width: 130px;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .career-card {
+        padding: 20px;
+      }
+      .welcome-title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="about-me-section">
+    <div class="container">
+      <div class="profile-section">
+        <h1 class="welcome-title">Career Interests</h1>
+        <p class="subtitle">Exploring My Future in Finance</p>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="navigation-tabs">
+        <a href="index.html" class="nav-tab">Home</a>
+        <a href="about.html" class="nav-tab">Hobbies</a>
+        <a href="discover.html" class="nav-tab">Discover Page</a>
+        <a href="resume.html" class="nav-tab">Resume Page</a>
+        <a href="career.html" class="nav-tab active-nav">Career Interest</a>
+        <a href="game.html" class="nav-tab">Interactive Game</a>
+      </div>
+
+      <!-- Career Cards -->
+      <div class="career-cards">
+
+        <!-- Company 1 -->
+        <div class="career-card">
+          <img src="images/smith.webp" alt="Smith Schafer Logo" class="company-logo">
+          <h3>Smith Schafer & Associates, Ltd.</h3>
+          <p><strong>Located in:</strong> Valley Square Corporate Center</p>
+          <p><strong>Address:</strong> 7500 Hwy 55 Suite 350, Minneapolis, MN 55427</p>
+          <p><strong>Phone:</strong> 952-920-1455</p>
+          <p><strong>Website:</strong> <a href="https://www.smithschafer.com/" target="_blank">www.smithschafer.com</a></p>
+          <p><strong>Department:</strong> Accounting & Financial Advisory</p>
+
+          <h4>Why I'm Interested</h4>
+          <p>Smith Schafer is close to my hometown and represents a strong community-driven financial firm. They value leadership, organization, and continuous learning, which aligns with my personal and professional goals.</p>
+
+          <h4>My Qualifications</h4>
+          <p>I’m passionate about leadership and communication. In high school, I was heavily involved in clubs and event planning, which developed my organization and teamwork skills. I enjoy learning new things and stepping into leadership roles — qualities that align with Smith Schafer’s collaborative work culture.</p>
+        </div>
+
+        <!-- Company 2 -->
+        <div class="career-card">
+          <img src="images/North Shore.jpg" alt="North Shore Bank Logo" class="company-logo">
+          <h3>North Shore Bank</h3>
+          <p><strong>Address:</strong> 131 West Superior Street, Duluth, MN 55802</p>
+          <p><strong>Phone:</strong> 218-733-5529</p>
+          <p><strong>Website:</strong> <a href="https://northshorebank.com/" target="_blank">www.northshorebank.com</a></p>
+          <p><strong>Department:</strong> Finance & Banking Services</p>
+
+          <h4>Why I'm Interested</h4>
+          <p>North Shore is a finance-based company that provides remote opportunities and strong community involvement. I’m drawn to their focus on teamwork, innovation, and student growth within the financial field.</p>
+
+          <h4>My Qualifications</h4>
+          <p>My background in leadership roles and event organization makes me a great fit for their team-oriented environment. I’m eager to gain experience, learn from professionals, and contribute positively through communication and strategic thinking.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

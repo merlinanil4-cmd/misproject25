@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | My Cozy Corner</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #fff7f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #f8e7ec;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-tab {
+      color: #555;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-tab:hover, .active-nav {
+      background-color: #e2b6c8;
+      color: white;
+    }
+
+    .welcome-section {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #fef2f4, #f9e1eb);
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+
+    .welcome-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #b06c85;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .video-section {
+      margin: 40px auto;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .hobbies-section {
+      background-color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hobby-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 30px;
+    }
+
+    .hobby-card {
+      background: #fef6f8;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      max-width: 350px;
+      text-align: left;
+    }
+
+    .hobby-card h3 {
+      color: #b06c85;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hobby-card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .hobby-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #b06c85;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .hobby-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #f8e7ec;
+      text-align: center;
+      padding: 15px;
+      color: #555;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    /* ======= Carousel Styles ======= */
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 1rem;
+      overflow: hidden;
+      border-radius: 15px;
+      background-color: #fdf1f5;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 20px;
+      z-index: 10;
+    }
+
+    .carousel .prev { left: 10px; }
+    .carousel .next { right: 10px; }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="nav-tab active-nav">Home</a>
+    <a href="about.html" class="nav-tab">Hobbies</a>
+    <a href="discover.html" class="nav-tab">Discover</a>
+    <a href="resume.html" class="nav-tab">Resume</a>
+    <a href="career.html" class="nav-tab">Career</a>
+    <a href="game.html" class="nav-tab">Game</a>
+  </nav>
+
+  <section class="welcome-section" id="home">
+    <img src="images/me.jpg" alt="Professional Headshot" class="profile-photo">
+    <h1 class="welcome-title">Welcome to My Cozy Corner</h1>
+    <p class="intro-text">
+      Hi, I’m Merlin Anil, a student at University of Minnesota Duluth pursuing Finance. 
+      I’m passionate about leadership, organization, and discovering creative ways to make a difference in the business world. 
+      This site gives you a peek into who I am, what I love, and where I’m headed!
+    </p>
+
+    <div class="video-section">
+      <h2>🎥 Watch My Welcome Video</h2>
+      <video controls poster="images/tumbnail.jpg">
+        <source src="videos/welcome.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section class="hobbies-section" id="hobbies">
+    <h1 class="welcome-title">My Hobbies</h1>
+    <p class="intro-text">A few things that bring me joy and peace</p>
+
+    <div class="hobby-container">
+      <!-- 🎠 Hobby 1 Carousel -->
+      <div class="hobby-card">
+        <div class="carousel" id="carousel1">
+          <div class="carousel-images">
+            <img src="images/litta.jpg" alt="Family photo 1">
+            <img src="images/dubai friends.jpg" alt="Family photo 2">
+            <img src="images/family.jpg" alt="Family photo 3">
+          </div>
+          <button class="prev" onclick="moveSlide('carousel1', -1)">&#10094;</button>
+          <button class="next" onclick="moveSlide('carousel1', 1)">&#10095;</button>
+        </div>
+
+        <h3>Spending Time with Family & Friends</h3>
+        <p>
+          Spending time with my family and friends has always been special to me—especially 
+          when I visit my loved ones who live far away. Every moment spent with them feels 
+          precious and full of laughter.
+        </p>
+        <a href="about.html">See More →</a>
+      </div>
+
+      <!-- 🎠 Hobby 2 Carousel -->
+      <div class="hobby-card">
+        <div class="carousel" id="carousel2">
+          <div class="carousel-images">
+            <img src="images/baking toast.jpg" alt="Baking treats 1">
+            <img src="images/jelly cake.jpg" alt="Baking treats 2">
+            <img src="images/cakepop.jpg" alt="Baking treats 3">
+          </div>
+          <button class="prev" onclick="moveSlide('carousel2', -1)">&#10094;</button>
+          <button class="next" onclick="moveSlide('carousel2', 1)">&#10095;</button>
+        </div>
+
+        <h3>Baking</h3>
+        <p>
+          Baking has been a passion since I was 4. I love creating sweet treats for family 
+          and friends, and it’s my favorite way to relax and unwind after a busy day.
+        </p>
+        <a href="about.html">See More →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Merlin Anil | My Cozy Corner</p>
+  </footer>
+
+  <script>
+    // 🎠 Reusable carousel logic
+    const carousels = {};
+
+    function moveSlide(id, direction) {
+      if (!carousels[id]) carousels[id] = 0;
+      const carousel = document.getElementById(id);
+      const slides = carousel.querySelector('.carousel-images');
+      const total = slides.querySelectorAll('img').length;
+
+      carousels[id] += direction;
+      if (carousels[id] < 0) carousels[id] = total - 1;
+      if (carousels[id] >= total) carousels[id] = 0;
+
+      const slideWidth = carousel.offsetWidth;
+      slides.style.transform = `translateX(${-carousels[id] * slideWidth}px)`;
+    }
+
+    // Keep carousel responsive on window resize
+    window.addEventListener('resize', () => {
+      for (const id in carousels) {
+        const carousel = document.getElementById(id);
+        const slides = carousel.querySelector('.carousel-images');
+        slides.style.transform = `translateX(${-carousels[id] * carousel.offsetWidth}px)`;
+      }
+    });
+  </script>
+</body>
+</html>
